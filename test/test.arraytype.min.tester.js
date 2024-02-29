@@ -1,11 +1,11 @@
 /**
  * 
- * Package: istypedarray
+ * Package: which-typedarray
  * Author: Ganesh B
  * Description: 
- * Install: npm i istypedarray --save
+ * Install: npm i which-typedarray --save
  * Github: https://github.com/ganeshkbhat/which-istypedarray/
- * npmjs Link: https://www.npmjs.com/package/istypedarray/
+ * npmjs Link: https://www.npmjs.com/package/which-typedarray/
  * File: index.js
  * File Description: 
  * 
