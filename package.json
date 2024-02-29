@@ -28,6 +28,7 @@
   "pre-commit": {
     "run": [
       "uglify",
+      "build",
       "gitadd",
       "test"
     ]
