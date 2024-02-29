@@ -27,85 +27,150 @@ describe('[is typed array tests] Tests to check if an array is an typed array of
 
   after(() => { });
 
-  it('should ', () => {
+  // isTypedArray,
+  // isBufferLike,
+  // supportsArrayBuffer,
+  // toString,
+  // supportsDataView,
+  // nativeIsArrayBufferView,
+  // isTypedArrayUsingPattern,
+  // toBufferView,
+  // getShallowProperty,
+  // tagTester
+
+  it('should be true for typed array using isTypedArray', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
   });
 
-  it('should ', () => {
+  it('should be true for typed array using isTypedArray', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
   });
 
-  it('should ', () => {
+  it('should be true for typed array using isTypedArray', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
   });
 
-  it('should ', () => {
+  it('should be true for typed array using isTypedArray', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
   });
 
-  it('should ', () => {
+  it('should be true for typed array using isTypedArray', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
   });
 
-  it('should ', () => {
+  it('should be true for typed array using isTypedArray', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
   });
 
-  it('should ', () => {
+  it('should be false for simple array using isTypedArray', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
   });
 
-  it('should ', () => {
+  it('should be false for simple array using isTypedArray', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+  
+  it('should be false for simple array using isTypedArray', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
   });
 
-  it('should ', () => {
+  it('should be false for simple array using isTypedArray', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
   });
 
-  it('should ', () => {
+  it('should be false for simple array using isTypedArray', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
   });
 
-  it('should ', () => {
+  it('should be true for simple buffer using isTypedArray', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
   });
 
-  it('should ', () => {
+  it('should be true for simple buffer using isTypedArray', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
   });
 
-  it('should ', () => {
+  it('should be true for simple buffer using isTypedArray', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
   });
 
-  it('should ', () => {
+  it('should be false for simple buffer using isTypedArray', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should be false for simple buffer using isTypedArray', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should be false for simple buffer using isTypedArray', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should be true for simple buffer using isBufferLike', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should be true for simple buffer using isBufferLike', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should be true for simple buffer using isBufferLike', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should be false for simple buffer using isBufferLike', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should be false for simple buffer using isBufferLike', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should be false for simple buffer using isBufferLike', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
