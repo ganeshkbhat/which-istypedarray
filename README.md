@@ -14,11 +14,7 @@ check if `[a]` an `array` or `[b]` is an `typed array` or `[c]` an `buffer array
 ### USAGE
 
 
-#### 
-
 ```
-
-
 const { 
   isTypedArray,
   isBufferLike,
@@ -110,7 +106,6 @@ let getMykeyValue = getShallowProperty("mykey")
 obj = { "mykey" : 10 }
 
 console.log("getMykeyValue: ", getMykeyValue(obj)) // 10
-
 
 ```
 
