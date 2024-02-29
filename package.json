@@ -23,7 +23,7 @@
     "test": "mocha --reporter spec --recursive --timeout 60000",
     "uglify": "uglifyjs --compress --mangle reserved=['$','require','exports'] index.js -o index.min.js",
     "gitadd": "git add .",
-    "build": "tsc"
+    "build": "tsc index.js --allowJs --emitDeclarationOnly --declaration --declarationMap --sourceMap"
   },
   "pre-commit": {
     "run": [
