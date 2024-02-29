@@ -81,7 +81,7 @@ function alternateIsDataView(obj) {
 }
 
 var hasDataViewBug = (
-  supportsDataView && (!/\[native code\]/.test(String(DataView)) || hasObjectTag(new DataView(new ArrayBuffer(8))))
+  supportsDataView() && (!/\[native code\]/.test(String(DataView)) || hasObjectTag(new DataView(new ArrayBuffer(8))))
 )
 
 var isDataView$1 = (hasDataViewBug ? alternateIsDataView : isDataView);
@@ -96,7 +96,7 @@ function toBufferView(bufferSource) {
   );
 }
 
-function shallowProperty(key) {
+function getShallowProperty(key) {
   return function (obj) {
     return obj == null ? void 0 : obj[key];
   };
@@ -114,7 +114,7 @@ function createSizePropertyCheck(getSizeProperty) {
   };
 }
 
-var getByteLength = shallowProperty('byteLength');
+var getByteLength = getShallowProperty('byteLength');
 var isBufferLike = createSizePropertyCheck(getByteLength);
 
 var supportsArrayBuffer = () => typeof ArrayBuffer !== 'undefined',
@@ -124,6 +124,7 @@ var supportsArrayBuffer = () => typeof ArrayBuffer !== 'undefined',
   nativeIsArrayBufferView = supportsArrayBuffer() && ArrayBuffer.isView;
 
 function isTypedArray(obj) {
+  // Credit : Underscore.js
   // `ArrayBuffer.isView` is the most future-proof, so use it when available.
   // Otherwise, fall back on the above regular expression.
   return nativeIsArrayBufferView
@@ -139,6 +140,8 @@ if (!isBrowser()) {
     toString,
     supportsDataView,
     nativeIsArrayBufferView,
-    isTypedArrayUsingPattern
+    isTypedArrayUsingPattern,
+    toBufferView,
+    getShallowProperty
   }
 }
