@@ -1,20 +1,92 @@
+/**
+ * 
+ * Package: 
+ * Author: Ganesh B
+ * Description: 
+ * Install: npm i which-arraytype --save
+ * Github: https://github.com/ganeshkbhat/which-arraytype/
+ * npmjs Link: https://www.npmjs.com/package/which-arraytype/
+ * File: index.js
+ * File Description: 
+ * 
+ * 
+*/
+
+/* eslint no-console: 0 */
+
+'use strict';
 
 
-var typedArrayPattern =
-  /\[object ((I|Ui)nt(8|16|32)|Float(32|64)|Uint8Clamped|Big(I|Ui)nt64)Array\]/;
+/**
+ * isBrowser
+ *
+ * @return {*} 
+ */
+function isBrowser() {
+  if (typeof process === "object" && typeof require === "function") {
+    return false;
+  }
+  if (typeof importScripts === "function") { return false; }
+  if (typeof window === "object") { return true; }
+}
 
-var isTypedArray = typedArrayPattern.test(
-  toString.call(new Buffer.from('stress'))
-);
-console.log(isTypedArray);
-isTypedArray = typedArrayPattern.test(toString.call(new Array('stress')));
-console.log(isTypedArray);
-isTypedArray = typedArrayPattern.test(toString.call(new String('stress')));
-console.log(isTypedArray);
-isTypedArray = typedArrayPattern.test(toString.call(new Number('stress')));
-console.log(isTypedArray);
-// isTypedArray = typedArrayPattern.test(toString.call(BigInt("stress")))
-// console.log(isTypedArray)
+var MAX_ARRAY_INDEX = Math.pow(2, 53) - 1;
+
+// Is a given variable an object?
+function isObject(obj) {
+  var type = typeof obj;
+  return type === 'function' || (type === 'object' && !!obj);
+}
+
+// Is a given value equal to null?
+function isNull(obj) {
+  return obj === null;
+}
+
+// Is a given variable undefined?
+function isUndefined(obj) {
+  return obj === void 0;
+}
+
+// Is a given value a boolean?
+function isBoolean(obj) {
+  return obj === true || obj === false || toString.call(obj) === '[object Boolean]';
+}
+
+// Is a given value a DOM element?
+function isElement(obj) {
+  return !!(obj && obj.nodeType === 1);
+}
+
+function tagTester(name) {
+  var tag = '[object ' + name + ']';
+  return function (obj) {
+    return toString.call(obj) === tag;
+  };
+}
+
+var isString = tagTester('String');
+var isNumber = tagTester('Number');
+var isDate = tagTester('Date');
+var isRegExp = tagTester('RegExp');
+var isError = tagTester('Error');
+var isSymbol = tagTester('Symbol');
+var isArrayBuffer = tagTester('ArrayBuffer');
+var isFunction = tagTester('Function');
+var isDataView = tagTester('DataView');
+var hasObjectTag = tagTester('Object');
+
+function alternateIsDataView(obj) {
+  return obj != null && isFunction$1(obj.getInt8) && isArrayBuffer(obj.buffer);
+}
+
+var hasDataViewBug = (
+  supportsDataView && (!/\[native code\]/.test(String(DataView)) || hasObjectTag(new DataView(new ArrayBuffer(8))))
+)
+
+var isDataView$1 = (hasDataViewBug ? alternateIsDataView : isDataView);
+var typedArrayPattern = /\[object ((I|Ui)nt(8|16|32)|Float(32|64)|Uint8Clamped|Big(I|Ui)nt64)Array\]/;
+var isTypedArrayUsingPattern = (arg) => typedArrayPattern.test(toString.call(arg));
 
 function toBufferView(bufferSource) {
   return new Uint8Array(
@@ -30,9 +102,6 @@ function shallowProperty(key) {
   };
 }
 
-var getByteLength = shallowProperty('byteLength');
-var isBufferLike = createSizePropertyCheck(getByteLength);
-
 // Common internal logic for `isArrayLike` and `isBufferLike`.
 function createSizePropertyCheck(getSizeProperty) {
   return function (collection) {
@@ -45,19 +114,31 @@ function createSizePropertyCheck(getSizeProperty) {
   };
 }
 
-console.log('isBufferLike: ', isBufferLike(['test', 'tester']));
-var supportsArrayBuffer = typeof ArrayBuffer !== 'undefined',
-  supportsDataView = typeof DataView !== 'undefined',
-  nativeIsView = supportsArrayBuffer && ArrayBuffer.isView;
+var getByteLength = shallowProperty('byteLength');
+var isBufferLike = createSizePropertyCheck(getByteLength);
+
+var supportsArrayBuffer = () => typeof ArrayBuffer !== 'undefined',
+  ObjProto = Object.prototype,
+  toString = ObjProto.toString,
+  supportsDataView = () => typeof DataView !== 'undefined',
+  nativeIsArrayBufferView = supportsArrayBuffer() && ArrayBuffer.isView;
 
 function isTypedArray(obj) {
   // `ArrayBuffer.isView` is the most future-proof, so use it when available.
   // Otherwise, fall back on the above regular expression.
-  return nativeIsView
-    ? nativeIsView(obj) && !isDataView$1(obj)
+  return nativeIsArrayBufferView
+    ? nativeIsArrayBufferView(obj) && !isDataView$1(obj)
     : isBufferLike(obj) && typedArrayPattern.test(toString.call(obj));
 }
 
-console.log('isTypedArray: ', isTypedArray(['test', 'tester']));
-console.log('isTypedArray: ', isTypedArray(new Int16Array([1, 2, 3, 4])));
-
+if (!isBrowser()) {
+  module.exports = {
+    isTypedArray,
+    isBufferLike,
+    supportsArrayBuffer,
+    toString,
+    supportsDataView,
+    nativeIsArrayBufferView,
+    isTypedArrayUsingPattern
+  }
+}
