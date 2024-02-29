@@ -13,20 +13,53 @@ check if `[a]` an `array` or `[b]` is an `typed array` or `[c]` an `buffer array
 
 ### USAGE
 
-<!-- 
+
 #### 
 
 ```
-const {  } = require("which-typedarray");
+const { 
+  isTypedArray,
+  isBufferLike,
+  supportsArrayBuffer,
+  toString,
+  supportsDataView,
+  nativeIsArrayBufferView,
+  isTypedArrayUsingPattern,
+  toBufferView,
+  getShallowProperty,
+  tagTester
+} = require("which-typedarray");
 
-``` 
--->
+
+// isTypedArray
+console.log('isTypedArray: ', isTypedArray(new Array('stress'))); // false
+console.log('isTypedArray: ', isTypedArray(new String('stress'))); // false
+console.log('isTypedArray: ', isTypedArray(new Number('stress'))); // false
+
+// isTypedArray
+
+console.log('isTypedArray: ', isTypedArray(['test', 'tester'])); // false
+console.log('isTypedArray: ', isTypedArray(new Int16Array([1, 2, 3, 4]))); // true
+
+// isBufferLike
+
+console.log('isBufferLike: ', isBufferLike(['test', 'tester'])); // false
+console.log('isBufferLike: ', isBufferLike(Buffer.from(['test', 'tester']))); // true
+
+// isTypedArrayUsingPattern
+
+console.log('isTypedArrayUsingPattern: ', isTypedArrayUsingPattern(new Int16Array([1, 2, 3, 4]))); // true
 
 
-#### tagTester
+// supportsArrayBuffer
+// supportsDataView
+// nativeIsArrayBufferView
 
-```
-const { tagTester } = require("which-typedarray");
+console.log("supportsArrayBuffer", supportsArrayBuffer()) // true
+console.log("supportsDataView", supportsDataView()) // true
+console.log("nativeIsArrayBufferView", nativeIsArrayBufferView()) // true
+
+// tagTester
 
 var isString = tagTester('String');
 var isNumber = tagTester('Number');
@@ -39,29 +72,47 @@ var isFunction = tagTester('Function');
 var isDataView = tagTester('DataView');
 var hasObjectTag = tagTester('Object');
 
-let obj = "string"
+let obj = "string";
 isString(obj) // true
-obj = 10
+
+obj = 10;
 isNumber(obj) // true
-obj = new Date()
+
+obj = new Date();
 isDate(obj) // true
-obj = new RegEx(/^a/g)
+
+obj = new RegEx(/^a/g);
 isRegExp(obj) // true
-obj = new Error("Test")
+
+obj = new Error("Test");
 isError(obj) // true
-obj = new Symbol("a")
+
+obj = new Symbol("a");
 isSymbol(obj) // true
-obj = new ArrayBuffer()
+
+obj = new ArrayBuffer();
 isArrayBuffer(obj) // true
-obj = () => {}
+
+obj = () => {};
 isFunction(obj) // true
-obj = [1, 2, 3]
+
+obj = [1, 2, 3];
 isDataView(obj) // false
+
 obj = {}
 hasObjectTag(obj) // false
 
+// getShallowProperty
+
+let getMykeyValue = getShallowProperty("mykey")
+obj = { "mykey" : 10 }
+
+console.log("getMykeyValue: ", getMykeyValue(obj)) // 10
+
 ```
+
 
 ### CREDITS:
 
 Parts of the code has been taken from [Underscorejs]() for ease of usability and better usage
+
