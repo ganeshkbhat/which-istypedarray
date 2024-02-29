@@ -140,42 +140,6 @@ describe('[is typed array tests] Tests to check if an array is an typed array of
     expect(actual).to.equal(expected);
   });
 
-  it('should be true for simple buffer using isBufferLike', () => {
-    let actual = true;
-    let expected = true;
-    expect(actual).to.equal(expected);
-  });
-
-  it('should be true for simple buffer using isBufferLike', () => {
-    let actual = true;
-    let expected = true;
-    expect(actual).to.equal(expected);
-  });
-
-  it('should be true for simple buffer using isBufferLike', () => {
-    let actual = true;
-    let expected = true;
-    expect(actual).to.equal(expected);
-  });
-
-  it('should be false for simple buffer using isBufferLike', () => {
-    let actual = true;
-    let expected = true;
-    expect(actual).to.equal(expected);
-  });
-
-  it('should be false for simple buffer using isBufferLike', () => {
-    let actual = true;
-    let expected = true;
-    expect(actual).to.equal(expected);
-  });
-
-  it('should be false for simple buffer using isBufferLike', () => {
-    let actual = true;
-    let expected = true;
-    expect(actual).to.equal(expected);
-  });
-
   it('should ', () => {
     let actual = true;
     let expected = true;
@@ -222,6 +186,42 @@ describe('[is typed array tests] Tests to check if an object is an buffer', () =
     expect(actual).to.equal(expected);
   });
 
+  it('should be true for simple buffer using isBufferLike', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should be true for simple buffer using isBufferLike', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should be true for simple buffer using isBufferLike', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should be false for simple buffer using isBufferLike', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should be false for simple buffer using isBufferLike', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should be false for simple buffer using isBufferLike', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
 });
 
 
@@ -244,13 +244,19 @@ describe('[is typed array tests] Tests to check if an environment supports DataV
   // getShallowProperty,
   // tagTester
 
-  it('should ', () => {
+  it('should be true that enviroment supports DataView using supportsDataView', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
   });
 
-  it('should ', () => {
+  it('should be true that enviroment supports ArrayBufferView using nativeIsArrayBufferView', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should be true that enviroment supports ArrayBuffer using supportsArrayBuffer', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
@@ -278,13 +284,13 @@ describe('[is typed array tests] Tests to get the value of a predefined key in a
   // getShallowProperty,
   // tagTester
 
-  it('should ', () => {
+  it('should return correct value examples for key value present on objects using getShallowProperty', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
   });
 
-  it('should ', () => {
+  it('should return wrong value examples for key value present on objects using getShallowProperty', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
@@ -312,7 +318,31 @@ describe('[is typed array tests] Tests to check the type of an object using tagT
   // getShallowProperty,
   // tagTester
 
-  it('should ', () => {
+  it('should get String type checker using tagTester', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should get Number type checker using tagTester', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should get Boolean type checker using tagTester', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should get Array type checker using tagTester', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should get Object type checker using tagTester', () => {
     let actual = true;
     let expected = true;
     expect(actual).to.equal(expected);
