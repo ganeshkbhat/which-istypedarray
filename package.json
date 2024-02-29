@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ganeshkbhat/which-arraytype.git"
+    "url": "git+https://github.com/ganeshkbhat/which-istypedarray.git"
   },
   "bugs": {
-    "url": "https://github.com/ganeshkbhat/which-arraytype/issues"
+    "url": "https://github.com/ganeshkbhat/which-istypedarray/issues"
   },
-  "homepage": "https://github.com/ganeshkbhat/which-arraytype#readme",
+  "homepage": "https://github.com/ganeshkbhat/which-istypedarray#readme",
   "scripts": {
     "test": "mocha --reporter spec --recursive --timeout 60000",
     "uglify": "uglifyjs --compress --mangle reserved=['$','require','exports'] index.js -o index.min.js",
