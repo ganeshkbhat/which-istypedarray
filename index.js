@@ -1,6 +1,6 @@
 /**
  * 
- * Package: 
+ * Package: which-istypedarray
  * Author: Ganesh B
  * Description: 
  * Install: npm i which-istypedarray --save
