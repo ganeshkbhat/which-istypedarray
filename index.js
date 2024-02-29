@@ -44,7 +44,7 @@ var supportsArrayBuffer = () => typeof ArrayBuffer !== 'undefined',
   toString = ObjProto.toString,
   supportsDataView = () => typeof DataView !== 'undefined',
   nativeIsArrayBufferView = supportsArrayBuffer() && ArrayBuffer.isView;
-
+  
 // Is a given variable an object?
 function isObject(obj) {
   var type = typeof obj;
