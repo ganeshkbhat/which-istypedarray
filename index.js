@@ -71,6 +71,8 @@ function isElement(obj) {
   return !!(obj && obj.nodeType === 1);
 }
 
+// Sample Usage for 
+
 var isString = tagTester('String');
 var isNumber = tagTester('Number');
 var isDate = tagTester('Date');
@@ -134,6 +136,19 @@ function isTypedArray(obj) {
 
 if (!isBrowser()) {
   module.exports = {
+    isTypedArray,
+    isBufferLike,
+    supportsArrayBuffer,
+    toString,
+    supportsDataView,
+    nativeIsArrayBufferView,
+    isTypedArrayUsingPattern,
+    toBufferView,
+    getShallowProperty,
+    tagTester
+  }
+
+  module.exports.default = {
     isTypedArray,
     isBufferLike,
     supportsArrayBuffer,
