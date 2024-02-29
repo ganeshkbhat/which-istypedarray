@@ -26,7 +26,7 @@ const {
   toBufferView,
   getShallowProperty,
   tagTester
-} = require("../index.js");
+} = require("which-typedarray");
 
 
 // isTypedArray

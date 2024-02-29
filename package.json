@@ -1,5 +1,5 @@
 {
-  "name": "which-arraytype",
+  "name": "which-array",
   "version": "1.0.0",
   "description": "check if an array or is a typed array or a buffer or simple array",
   "main": "index.js",
@@ -30,7 +30,31 @@
       "test"
     ]
   },
-  "keywords": [],
+  "keywords": [
+    "isTypedArray",
+    "check if the array is a typed array",
+    "array",
+    "get property value of an predefined object property",
+    "supports DataView",
+    "suppprts IsArrayBufferView",
+    "is TypedArray Using regex Pattern  check",
+    "convert to BufferView",
+    "convert to a string using toString",
+    "supportsArrayBuffer",
+    "check if the array is a simple array",
+    "integer",
+    "is like buffer",
+    "isTypedArray",
+    "isBufferLike",
+    "supportsArrayBuffer",
+    "toString",
+    "supportsDataView",
+    "nativeIsArrayBufferView",
+    "isTypedArrayUsingPattern",
+    "toBufferView",
+    "getShallowProperty",
+    "tagTester"
+  ],
   "author": "Ganesh B <ganeshsurfs@gmail.com>",
   "license": "MIT",
   "devDependencies": {
