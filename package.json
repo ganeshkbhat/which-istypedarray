@@ -1,7 +1,7 @@
 {
   "name": "which-array",
   "version": "1.0.0",
-  "description": "check if an array or is a typed array or a buffer or simple array",
+  "description": "check if [a] an array or [b] is an typed array or [c] an buffer array or [d] specific type using the package",
   "main": "index.js",
   "exports": {
     "require": "./index.js",
