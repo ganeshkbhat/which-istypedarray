@@ -17,6 +17,8 @@ check if `[a]` an `array` or `[b]` is an `typed array` or `[c]` an `buffer array
 #### 
 
 ```
+
+
 const { 
   isTypedArray,
   isBufferLike,
@@ -28,7 +30,7 @@ const {
   toBufferView,
   getShallowProperty,
   tagTester
-} = require("which-typedarray");
+} = require("../index.js");
 
 
 // isTypedArray
@@ -81,13 +83,13 @@ isNumber(obj) // true
 obj = new Date();
 isDate(obj) // true
 
-obj = new RegEx(/^a/g);
+obj = new RegExp(/^a/g);
 isRegExp(obj) // true
 
 obj = new Error("Test");
 isError(obj) // true
 
-obj = new Symbol("a");
+obj = Symbol("a");
 isSymbol(obj) // true
 
 obj = new ArrayBuffer();
@@ -108,6 +110,7 @@ let getMykeyValue = getShallowProperty("mykey")
 obj = { "mykey" : 10 }
 
 console.log("getMykeyValue: ", getMykeyValue(obj)) // 10
+
 
 ```
 

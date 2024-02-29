@@ -32,6 +32,19 @@ function isBrowser() {
 
 var MAX_ARRAY_INDEX = Math.pow(2, 53) - 1;
 
+function tagTester(name) {
+  var tag = '[object ' + name + ']';
+  return function (obj) {
+    return toString.call(obj) === tag;
+  };
+}
+
+var supportsArrayBuffer = () => typeof ArrayBuffer !== 'undefined',
+  ObjProto = Object.prototype,
+  toString = ObjProto.toString,
+  supportsDataView = () => typeof DataView !== 'undefined',
+  nativeIsArrayBufferView = supportsArrayBuffer() && ArrayBuffer.isView;
+
 // Is a given variable an object?
 function isObject(obj) {
   var type = typeof obj;
@@ -56,13 +69,6 @@ function isBoolean(obj) {
 // Is a given value a DOM element?
 function isElement(obj) {
   return !!(obj && obj.nodeType === 1);
-}
-
-function tagTester(name) {
-  var tag = '[object ' + name + ']';
-  return function (obj) {
-    return toString.call(obj) === tag;
-  };
 }
 
 var isString = tagTester('String');
@@ -117,12 +123,6 @@ function createSizePropertyCheck(getSizeProperty) {
 var getByteLength = getShallowProperty('byteLength');
 var isBufferLike = createSizePropertyCheck(getByteLength);
 
-var supportsArrayBuffer = () => typeof ArrayBuffer !== 'undefined',
-  ObjProto = Object.prototype,
-  toString = ObjProto.toString,
-  supportsDataView = () => typeof DataView !== 'undefined',
-  nativeIsArrayBufferView = supportsArrayBuffer() && ArrayBuffer.isView;
-
 function isTypedArray(obj) {
   // Credit : Underscore.js
   // `ArrayBuffer.isView` is the most future-proof, so use it when available.
@@ -142,6 +142,7 @@ if (!isBrowser()) {
     nativeIsArrayBufferView,
     isTypedArrayUsingPattern,
     toBufferView,
-    getShallowProperty
+    getShallowProperty,
+    tagTester
   }
 }
