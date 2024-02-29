@@ -1,4 +1,4 @@
-# which-arraytype
+# is-typedarray
 check if `[a]` an `array` or `[b]` is an `typed array` or `[c]` an `buffer array` or `[d]` specific `type` using the package and browser compatible
 
 
@@ -26,7 +26,7 @@ const {
   toBufferView,
   getShallowProperty,
   tagTester
-} = require("which-typedarray");
+} = require("is-typedarray");
 
 
 // isTypedArray
