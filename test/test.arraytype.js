@@ -19,13 +19,97 @@
 const { expect } = require('chai');
 
 
-describe('[request tests] Tests to ', () => {
+describe('[is typed array tests] Tests to check if an array is an typed array of buffer', () => {
   let tst, written;
   before(() => {
     
   });
 
   after(() => { });
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
 
   it('should ', () => {
     let actual = true;
