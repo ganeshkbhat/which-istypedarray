@@ -11,6 +11,8 @@ check if `[a]` an `array` or `[b]` is an `typed array` or `[c]` an `buffer array
 * get predefined key/ property value of an object using the `getShallowProperty`
 
 
+Demos can be found in [demos](https://github.com/ganeshkbhat/which-istypedarray/tree/main/demos) folder
+
 ### USAGE
 
 
