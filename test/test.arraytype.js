@@ -189,3 +189,140 @@ describe('[is typed array tests] Tests to check if an array is an typed array of
   });
 
 });
+
+
+describe('[is typed array tests] Tests to check if an object is an buffer', () => {
+  let tst, written;
+  before(() => {
+    
+  });
+
+  after(() => { });
+
+  // isTypedArray,
+  // isBufferLike,
+  // supportsArrayBuffer,
+  // toString,
+  // supportsDataView,
+  // nativeIsArrayBufferView,
+  // isTypedArrayUsingPattern,
+  // toBufferView,
+  // getShallowProperty,
+  // tagTester
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+});
+
+
+describe('[is typed array tests] Tests to check if an environment supports DataView ArrayBufferView ArrayBuffer', () => {
+  let tst, written;
+  before(() => {
+    
+  });
+
+  after(() => { });
+
+  // isTypedArray,
+  // isBufferLike,
+  // supportsArrayBuffer,
+  // toString,
+  // supportsDataView,
+  // nativeIsArrayBufferView,
+  // isTypedArrayUsingPattern,
+  // toBufferView,
+  // getShallowProperty,
+  // tagTester
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+});
+
+
+describe('[is typed array tests] Tests to get the value of a predefined key in an object from getShallowProperty', () => {
+  let tst, written;
+  before(() => {
+    
+  });
+
+  after(() => { });
+
+  // isTypedArray,
+  // isBufferLike,
+  // supportsArrayBuffer,
+  // toString,
+  // supportsDataView,
+  // nativeIsArrayBufferView,
+  // isTypedArrayUsingPattern,
+  // toBufferView,
+  // getShallowProperty,
+  // tagTester
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+});
+
+
+describe('[is typed array tests] Tests to check the type of an object using tagTester', () => {
+  let tst, written;
+  before(() => {
+    
+  });
+
+  after(() => { });
+
+  // isTypedArray,
+  // isBufferLike,
+  // supportsArrayBuffer,
+  // toString,
+  // supportsDataView,
+  // nativeIsArrayBufferView,
+  // isTypedArrayUsingPattern,
+  // toBufferView,
+  // getShallowProperty,
+  // tagTester
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+  it('should ', () => {
+    let actual = true;
+    let expected = true;
+    expect(actual).to.equal(expected);
+  });
+
+});
+
