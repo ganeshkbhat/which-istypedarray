@@ -16,8 +16,8 @@
 
 'use strict';
 
-import * as istypedarray from "./index";
+import { default as istypedarray } from "./index.js";
 
-export default istypedarray
+export default { ...istypedarray }
 export const isTypedArray = istypedarray;
 
