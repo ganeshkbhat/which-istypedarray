@@ -17,10 +17,10 @@
 'use strict';
 
 const { expect } = require('chai');
-const { isBufferLike, isTypedArray, getShallowProperty, supportsDataView, nativeIsArrayBufferView, supportsArrayBuffer, tagTester } = require('../index');
+const { isBufferLike, isTypedArray, getShallowProperty, supportsDataView, nativeIsArrayBufferView, supportsArrayBuffer, tagTester } = require('../index.min.js');
 
 
-describe('[is typed array tests] index.js Tests to check if an array is an typed array of buffer', () => {
+describe('[is typed array tests] index.min.js Tests to check if an array is an typed array of buffer', () => {
   let tst, written;
   before(() => {
 
@@ -120,7 +120,7 @@ describe('[is typed array tests] index.js Tests to check if an array is an typed
 });
 
 
-describe('[is typed array tests] index.js Tests to check if an object is an buffer', () => {
+describe('[is typed array tests] index.min.js Tests to check if an object is an buffer', () => {
   let tst, written;
   before(() => {
 
@@ -183,7 +183,7 @@ describe('[is typed array tests] index.js Tests to check if an object is an buff
 });
 
 
-describe('[is typed array tests] index.js Tests to check if an environment supports DataView ArrayBufferView ArrayBuffer', () => {
+describe('[is typed array tests] index.min.js Tests to check if an environment supports DataView ArrayBufferView ArrayBuffer', () => {
   let tst, written;
   before(() => {
 
@@ -228,7 +228,7 @@ describe('[is typed array tests] index.js Tests to check if an environment suppo
 });
 
 
-describe('[is typed array tests] index.js Tests to get the value of a predefined key in an object from getShallowProperty', () => {
+describe('[is typed array tests] index.min.js Tests to get the value of a predefined key in an object from getShallowProperty', () => {
   let tst, written;
   before(() => {
 
@@ -278,7 +278,7 @@ describe('[is typed array tests] index.js Tests to get the value of a predefined
 });
 
 
-describe('[is typed array tests] index.js Tests to check the type of an object using tagTester', () => {
+describe('[is typed array tests] index.min.js Tests to check the type of an object using tagTester', () => {
   let tst, written;
   before(() => {
 

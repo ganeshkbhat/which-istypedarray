@@ -1,5 +1,5 @@
 # which-arraytype
-check if `[a]` an `array` or `[b]` is an `typed array` or `[c]` an `buffer array` or `[d]` specific `type` using the package
+check if `[a]` an `array` or `[b]` is an `typed array` or `[c]` an `buffer array` or `[d]` specific `type` using the package and browser compatible
 
 
 * check if `[a]` an `array` or `[b]` is an `typed array` or `[c]` an `buffer array` or `[d]` specific `type` using `isTypedArray`
@@ -112,5 +112,5 @@ console.log("getMykeyValue: ", getMykeyValue(obj)) // 10
 
 ### CREDITS:
 
-Parts of the code has been taken from [Underscorejs]() for ease of usability and better usage
+Parts of the code has been taken from [Underscorejs]() but bettered for ease of usability, simpler usage, and browser compatible
 
