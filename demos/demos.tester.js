@@ -3,9 +3,9 @@
  * Package: 
  * Author: Ganesh B
  * Description: 
- * Install: npm i which-typedarray --save
- * Github: https://github.com/ganeshkbhat/which-typedarray/
- * npmjs Link: https://www.npmjs.com/package/which-typedarray/
+ * Install: npm i which-istypedarray --save
+ * Github: https://github.com/ganeshkbhat/which-istypedarray/
+ * npmjs Link: https://www.npmjs.com/package/which-istypedarray/
  * File: index.js
  * File Description: 
  * 

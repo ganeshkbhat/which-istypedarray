@@ -3,9 +3,9 @@
  * Package: 
  * Author: Ganesh B
  * Description: 
- * Install: npm i which-arraytype --save
- * Github: https://github.com/ganeshkbhat/which-arraytype/
- * npmjs Link: https://www.npmjs.com/package/which-arraytype/
+ * Install: npm i which-istypedarray --save
+ * Github: https://github.com/ganeshkbhat/which-istypedarray/
+ * npmjs Link: https://www.npmjs.com/package/which-istypedarray/
  * File: index.js
  * File Description: 
  * 
