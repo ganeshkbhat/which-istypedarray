@@ -1,6 +1,6 @@
 {
   "name": "which-istypedarray",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "check if [a] an array or [b] is an typed array or [c] an buffer array or [d] specific type using the package",
   "main": "index.js",
   "exports": {
